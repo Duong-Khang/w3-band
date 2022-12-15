@@ -15,6 +15,11 @@ html {
 #header {
   height: 46px;
   background-color: #000;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
 #nav {
@@ -90,9 +95,36 @@ html {
 }
 
 #slider {
+  position: relative;
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url("../img/chicago.jpg") top center / cover no-repeat;
+}
+
+.text-content {
+  position: absolute;
+  bottom: 48px;
+  color: #fff;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  text-align: center;
+  /* left: 0;
+  right: 0; */
+  width: 100%;
+}
+
+.text-heading {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.text-descrition {
+  font-size: 15px;
 }
 
 #content {
+  height: 1000px;
 }
 
 #footer {
