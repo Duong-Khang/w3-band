@@ -17,25 +17,76 @@ html {
   background-color: #000;
 }
 
-#nav li {
+#nav {
   display: inline-block;
+}
+
+#nav > li {
+  display: inline-block;
+}
+
+#nav li {
+  position: relative;
 }
 
 #nav .subnav {
   display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  color: #000;
+  list-style: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  min-width: 160px;
+}
+
+#nav .nav-arrow-down {
+  font-size: 14px;
+}
+
+#nav li:hover .subnav {
+  display: block;
+}
+
+#nav .subnav a {
+  color: #000;
+  padding: 0 16px;
+  line-height: 38px;
+}
+
+#nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
 }
 
 #nav li a {
-  color: #fff;
   text-decoration: none;
   line-height: 46px;
   padding: 0 24px;
   display: block;
 }
 
-#nav li:hover a {
+#nav > li:hover > a,
+#nav .subnav li:hover {
   background-color: #ccc;
   color: #000;
+}
+
+#header .search-btn {
+  float: right;
+  padding: 0 22px;
+}
+
+#header .search-icon {
+  font-size: 14px;
+  color: #fff;
+  line-height: 46px;
+}
+
+#header .search-btn:hover {
+  background-color: #f44336;
+  cursor: pointer;
 }
 
 #slider {
