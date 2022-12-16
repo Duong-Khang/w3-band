@@ -1,0 +1,52 @@
+@media (max-width: 739px) {
+  .s-col-full {
+    width: 100%;
+  }
+
+  #nav > li {
+    display: block;
+  }
+
+  #header {
+    overflow: hidden;
+  }
+
+  #header .search-btn {
+    display: none;
+  }
+
+  #nav {
+    display: block;
+  }
+
+  #nav .subnav {
+    position: initial;
+    background-color: #333;
+  }
+
+  #nav .subnav a {
+    color: #fff;
+    padding: 5px 40px;
+  }
+
+  #header .mobile-menu-btn {
+    display: block;
+  }
+
+  #nav > li:first-child {
+    display: inline-block;
+  }
+
+  #nav li a {
+    padding: 1px 24px;
+  }
+
+  #content .member-item {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  #content .member-img {
+    width: 60%;
+  }
+}

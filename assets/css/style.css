@@ -141,11 +141,13 @@ html {
   color: #000;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
   float: right;
   padding: 0 22px;
 }
 
+#header .menu-icon,
 #header .search-icon {
   font-size: 14px;
   color: #fff;
@@ -155,6 +157,21 @@ html {
 #header .search-btn:hover {
   background-color: #f44336;
   cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+  color: #000;
+}
+
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
 }
 
 #slider {
@@ -192,9 +209,12 @@ html {
 
 #content .content-section {
   width: 800px;
+  max-width: 100%;
   padding: 64px 0 112px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 #content .section-heading,
@@ -211,6 +231,8 @@ html {
 #content .section-sub-heading {
   font-size: 15px;
   margin-top: 25px;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 #content .about-text {
@@ -221,7 +243,7 @@ html {
 }
 
 #content .member-list {
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 #content .member-name {
@@ -270,7 +292,7 @@ html {
 
 /*Places*/
 .places-list {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .places-img {

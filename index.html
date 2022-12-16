@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link
       rel="shortcut icon"
       href="https://themify.me/wp-content/themes/themify-v32/favicon.png"
@@ -43,6 +44,10 @@
         <div class="search-btn">
           <i class="search-icon ti-search"></i>
         </div>
+
+        <div id="mobile-menu" class="mobile-menu-btn">
+          <i class="menu-icon ti-menu"></i>
+        </div>
         <!--End search-->
       </div>
 
@@ -74,7 +79,7 @@
             ea commodo consequat.
           </p>
           <div class="row member-list">
-            <div class="member-item col col-third text-center">
+            <div class="col col-third text-center mt-16 s-col-full">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -82,7 +87,7 @@
                 class="member-img"
               />
             </div>
-            <div class="member-item col col-third text-center">
+            <div class="col col-third text-center mt-16 s-col-full">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -90,7 +95,7 @@
                 class="member-img"
               />
             </div>
-            <div class="member-item col col-third text-center">
+            <div class="col col-third text-center mt-16 s-col-full">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -115,7 +120,7 @@
             </ul>
             <!--Places-->
             <div class="places-list row">
-              <div class="col-third col">
+              <div class="col-third col mt-16 s-col-full">
                 <img src="./assets/img/newyork.jpg" alt="" class="places-img" />
                 <div class="places-body">
                   <h3 class="palces-heading">New York</h3>
@@ -126,7 +131,7 @@
                   <button class="btn js-buy-ticket">Buy Tickets</button>
                 </div>
               </div>
-              <div class="col-third col">
+              <div class="col-third col mt-16 s-col-full">
                 <img src="./assets/img/paris.jpg" alt="" class="places-img" />
                 <div class="places-body">
                   <h3 class="palces-heading">Paris</h3>
@@ -137,7 +142,7 @@
                   <button class="btn js-buy-ticket">Buy Tickets</button>
                 </div>
               </div>
-              <div class="col-third col">
+              <div class="col-third col mt-16 s-col-full">
                 <img src="./assets/img/sanfran.jpg" alt="" class="places-img" />
                 <div class="places-body">
                   <h3 class="palces-heading">San Francisco</h3>
@@ -294,6 +299,36 @@
       modalContainer.addEventListener("click", function (event) {
         event.stopPropagation();
       });
+    </script>
+
+    <script>
+      var header = document.getElementById("header");
+
+      var mobileMenu = document.getElementById("mobile-menu");
+      var headerHeight = header.clientHeight;
+      mobileMenu.onclick = function () {
+        var isClose = header.clientHeight === headerHeight;
+        if (isClose) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = null;
+        }
+      };
+
+      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+
+      for (const menuItem of menuItems) {
+        menuItem.addEventListener("click", function (event) {
+          var isParentMenu =
+            menuItem.nextElementSibling &&
+            menuItem.nextElementSibling.classList.contains("subnav");
+          if (isParentMenu) {
+            event.preventDefault();
+          } else {
+            header.style.height = null;
+          }
+        });
+      }
     </script>
   </body>
 </html>
