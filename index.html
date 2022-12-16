@@ -68,8 +68,8 @@
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.
           </p>
-          <div class="member-list">
-            <div class="member-item">
+          <div class="row member-list">
+            <div class="member-item col col-third text-center">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -77,7 +77,7 @@
                 class="member-img"
               />
             </div>
-            <div class="member-item">
+            <div class="member-item col col-third text-center">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -85,7 +85,7 @@
                 class="member-img"
               />
             </div>
-            <div class="member-item">
+            <div class="member-item col col-third text-center">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -93,7 +93,6 @@
                 class="member-img"
               />
             </div>
-            <div class="clear"></div>
           </div>
         </div>
         <!--Tour-->
@@ -110,8 +109,8 @@
               <li>November <span class="quantity">3</span></li>
             </ul>
             <!--Places-->
-            <div class="places-list">
-              <div class="places-item">
+            <div class="places-list row">
+              <div class="col-third col">
                 <img src="./assets/img/newyork.jpg" alt="" class="places-img" />
                 <div class="places-body">
                   <h3 class="palces-heading">New York</h3>
@@ -124,7 +123,7 @@
                   </button>
                 </div>
               </div>
-              <div class="places-item">
+              <div class="col-third col">
                 <img src="./assets/img/paris.jpg" alt="" class="places-img" />
                 <div class="places-body">
                   <h3 class="palces-heading">Paris</h3>
@@ -137,7 +136,7 @@
                   </button>
                 </div>
               </div>
-              <div class="places-item">
+              <div class="col-third col">
                 <img src="./assets/img/sanfran.jpg" alt="" class="places-img" />
                 <div class="places-body">
                   <h3 class="palces-heading">San Francisco</h3>
@@ -150,7 +149,6 @@
                   </button>
                 </div>
               </div>
-              <div class="clear"></div>
             </div>
           </div>
         </div>
@@ -158,6 +156,56 @@
         <div class="content-section">
           <h2 class="section-heading">CONTACT</h2>
           <p class="section-sub-heading">Fan? Drop a note!</p>
+          <div class="row contact-content">
+            <div class="col col-half contact-info">
+              <p><i class="ti-location-pin"></i> Chicago, US</p>
+              <p><i class="ti-mobile"></i> Phone: +00 151515</p>
+              <p><i class="ti-email"></i> Email: mail@mail.com</p>
+            </div>
+            <div class="col col-half contact-form">
+              <form action="">
+                <div class="row">
+                  <div class="col col-half">
+                    <input
+                      type="text"
+                      name=""
+                      placeholder="Name"
+                      required
+                      id=""
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col col-half">
+                    <input
+                      type="email"
+                      name=""
+                      placeholder="Email"
+                      required
+                      id=""
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="row mt-8">
+                  <div class="col col-full">
+                    <input
+                      type="text"
+                      name=""
+                      placeholder="Message"
+                      required
+                      id=""
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <input
+                  class="form-submit-btn mt-16"
+                  type="submit"
+                  value="SEND"
+                />
+              </form>
+            </div>
+          </div>
         </div>
       </div>
 
